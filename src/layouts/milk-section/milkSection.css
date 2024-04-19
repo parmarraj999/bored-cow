@@ -1,0 +1,135 @@
+.milk-section{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 5rem;
+    padding: 4rem 0;
+}
+.milk-section-header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.milk-section-header .title{
+    display: flex;
+    gap: 1rem;
+}
+.milk-section-header h1{
+    font-size: 50px;
+    position: relative;
+    display: flex;
+    gap: 1rem;
+}
+.milk-section p{
+    font-size: 18px;
+    margin-top: 2rem;
+    font-family: polysans median;
+    width: 50%;
+    text-align: center;
+}
+
+
+/* ======= milk box section ====  */
+.milk-box-container{
+    margin-top: 3rem;
+    height:fit-content;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.milk-box-wrapper{
+    width: 75%;
+    margin: 0 auto;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    align-items: center ;
+    justify-content: space-between;
+    gap: 5rem;
+}
+.milk-box{
+    /* min-width: 400px; */
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    position: relative;
+}
+.tap-img{
+    position: absolute;
+    top: -5%;
+    right: -20%;
+    z-index: 11;
+    width: 50px;
+    display: none;
+}
+.milk-box img{
+    width:100%;
+}
+.box-position{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.box{
+    z-index: 11;
+}
+
+.glass{
+    transform: scale(.5);
+    position: absolute;
+}
+
+.milk-box h2{
+    position: absolute;
+    top: 100%;
+    font-size: 1.4rem;
+    word-wrap: nowrap;
+    text-transform: uppercase;
+    margin-top: 1.5rem;
+    font-family: polysans bulky,Arial, Helvetica, sans-serif;
+}
+
+@media screen and (max-width:765px) {
+    .milk-box-container{
+        overflow: scroll;
+        height: 100vh;
+        padding: 0 3rem 0 3rem;
+    }
+    .milk-section-header .title{
+        gap: .6rem
+    }
+    .milk-section-header h1{
+        font-size: 22px
+    }
+    .milk-section p{
+        font-size: 18px;
+        margin-top: 0rem;
+        width: 85%;
+    }
+    .milk-box-wrapper{
+        width: 90%;
+        height: auto;
+        gap: 2rem;
+    }
+    .milk-box{
+        height: fit-content;
+        width: 100%;
+    }
+    .milk-box img{
+        width: 250px;
+        /* height: 500px; */
+    }
+    .tap-img{
+        display: block;
+    }
+}
+
+

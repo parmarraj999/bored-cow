@@ -1,0 +1,31 @@
+/* bg-color: #1b1f27 */
+/* main color : #aeff00 */
+
+/* //fonts  */
+/* font 1 = PolySans Bulky  */
+/* font 2 = PolySans Neutral  */
+/* font 2 = PolySans Trial Median  */
+.shop-btn{
+    padding: .8rem 1.4rem;
+    color: black;
+    font-family: polysans median;
+    font-size: 18px;
+    border: 1.5px solid #292929;
+    border-radius: 1rem;
+    background: #ffba01;
+    text-transform: capitalize;
+}
+.header-title{
+    text-transform: uppercase;
+    font-family: polysans bulky, Helvetica;
+    color: #292929;
+    font-size: 50px;
+    /* display: flex;
+    gap: 1rem; */
+    font-weight: 700;
+}
+@media screen and (max-width:765px) {
+    .header-title{
+        font-size: 30px;
+    }
+}
