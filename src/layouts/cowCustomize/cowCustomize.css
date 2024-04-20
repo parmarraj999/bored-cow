@@ -160,3 +160,29 @@
     width: 110px;
     z-index: 15;
 }
+
+@media screen and (max-width:765px) {
+    .cow-customize-section{
+        height: 120vh;
+    }
+    .cow-customize-wrapper{
+        width: 85%;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+    }
+    .items-container{
+        height: 500px;
+        overflow-y: hidden;
+    }
+    .item-container{
+        height: 100%;
+        overflow: scroll;
+    }
+    .item-nav{
+        height: 50px;
+    }
+    .main-scene-img{
+        width: auto;
+    }
+}

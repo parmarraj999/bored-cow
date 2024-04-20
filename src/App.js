@@ -10,6 +10,7 @@ import SlideCard from "./layouts/slide-card/slideCard";
 import CouponSection from "./layouts/couponSection/couponSection";
 import SunSection from "./layouts/sunSection/sunSection";
 import CowCustomize from "./layouts/cowCustomize/cowCustomize";
+import Footer from "./layouts/footer/footer";
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -27,6 +28,7 @@ function App() {
       <CouponSection/>
       <SunSection/>
       <CowCustomize/>
+      <Footer/>
     </div>
   );
 }

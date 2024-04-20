@@ -4,6 +4,7 @@ import Scene from './scene'
 import Eye from './eye'
 import Outfit from './outfit'
 import Accessories from './accessories'
+import html2canvas from 'html2canvas'
 
 function CowCustomize() {
 
@@ -14,13 +15,23 @@ function CowCustomize() {
         setEyeURL("../assets/eyes/cow-face.png")
         setLegURL("")
         setOutfitURL("")
+        setHatURL("")
+    }
+
+    const captureImage = () => {
+        html2canvas(document.querySelector(".scene")).then(function(canvas){
+            var a = document.createElement("a");
+            a.href = canvas.toDataURL("..assets/image/jpeg").replace("image/jpeg","image/octet-stream");
+            a.download = 'CowScreenShot.jpg';
+            a.click()
+        })
     }
 
     const [sceneURL, setSceneURL] = useState("../assets/item-img/scene-1-desktop.png");
     const [eyeURL, setEyeURL] = useState("../assets/eyes/cow-face.png")
-    const [legURL,setLegURL] = useState("../assets/legs/legs1.webp")
-    const [outfitURL,setOutfitURL] = useState("../assets/outfit/short-sleeve-shirt-1.webp")
-    const [hatURL,setHatURL] = useState("../assets/hats/hat1.webp")
+    const [legURL, setLegURL] = useState("../assets/legs/legs1.webp")
+    const [outfitURL, setOutfitURL] = useState("../assets/outfit/short-sleeve-shirt-1.webp")
+    const [hatURL, setHatURL] = useState("")
 
     return (
         <div className='cow-customize-section' >
@@ -49,7 +60,10 @@ function CowCustomize() {
                     {currItem === "eye" ? <Eye setEyeURL={setEyeURL} /> : ""}
                     {currItem === "outfit" ? <Outfit setOutfitURL={setOutfitURL} /> : ""}
                     {currItem === "accessories" ? <Accessories setLegURL={setLegURL} setHatURL={setHatURL} /> : ""}
-                    <p className='start-btn' onClick={starOver}> start over</p>
+                    <div style={{display:"flex",alignItems:"center",gap:"1rem"}}>
+                        <p className='start-btn' onClick={starOver}> start over</p>
+                        <p className='start-btn' onClick={captureImage}>ScreenShot</p>
+                    </div>
                 </div>
             </div>
         </div>
